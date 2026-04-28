@@ -48,7 +48,7 @@ export default function Header() {
             </Link>
           ))}
           <Link 
-            href="/views/Contato" 
+            href="https://api.whatsapp.com/send/?phone=553598632437&text&type=phone_number&app_absent=0" 
             className="bg-red-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-all hover:shadow-[0_0_15px_rgba(220,38,38,0.5)]"
           >
             Matricule-se
