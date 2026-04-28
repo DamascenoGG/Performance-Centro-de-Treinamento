@@ -29,10 +29,23 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <Footer />
+      <body 
+        style={{ backgroundImage: "url('/ct-background.png')" }}
+        className="min-h-full bg-cover bg-center bg-fixed bg-no-repeat text-white"
+      >
+        {/* Camada escura por cima da imagem para garantir a leitura dos textos */}
+        <div className="flex flex-col min-h-screen bg-black/75 backdrop-blur-[2px]">
+          
+          <Header />
+          
+          {/* O conteúdo das suas páginas (Home, Planos, etc) vai aparecer aqui dentro */}
+          <main className="flex-1">
+            {children}
+          </main>
+          
+          <Footer />
+          
+        </div>
       </body>
     </html>
   );

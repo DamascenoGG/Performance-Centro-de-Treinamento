@@ -4,8 +4,10 @@ export default function Home() {
   return (
     <main className="flex-1">
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-black relative overflow-hidden flex items-center justify-center">
-        {/* Background overlay */}
+      {/* Removi o gradiente vermelho e adicionei bg-transparent */}
+      <section className="min-h-screen bg-transparent relative overflow-hidden flex items-center justify-center">
+        
+        {/* Background overlay (mantido para o texto não sumir na foto) */}
         <div className="absolute inset-0 bg-black/40 z-10" />
         
         {/* Grid pattern background */}
@@ -41,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-center">
+      <section className="py-16 bg-black/80 text-center relative z-20">
         <p className="text-gray-400 text-sm">
           Conheça nossa estrutura e transforme sua vida. Comece agora!
         </p>
