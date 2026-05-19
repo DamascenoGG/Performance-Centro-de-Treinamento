@@ -24,6 +24,7 @@ export default function Sobre() {
               src="/academia.png"
               alt="Performance Centro de Treinamento"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               priority
             />

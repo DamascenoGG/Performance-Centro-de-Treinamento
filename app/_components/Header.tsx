@@ -26,6 +26,7 @@ export default function Header() {
               src="/logo.jpeg"
               alt="Logo Performance"
               fill
+              sizes="(max-width: 768px) 100px, 56px"
               className="object-cover" // MUDANÇA AQUI: cover preenche melhor o círculo
               priority
             />
@@ -49,7 +50,7 @@ export default function Header() {
           ))}
           <Link 
             href="https://api.whatsapp.com/send/?phone=553598632437&text&type=phone_number&app_absent=0" 
-            className="bg-red-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-all hover:shadow-[0_0_15px_rgba(220,38,38,0.5)]"
+            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition-all transform hover:scale-110 shadow-lg"
           >
             Matricule-se
           </Link>

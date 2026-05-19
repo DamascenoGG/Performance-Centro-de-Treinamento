@@ -16,7 +16,7 @@ export default function Footer() {
         {/* 1. Logo e Nome */}
         <Link href="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }} className="group mb-8">
           <div className="w-16 h-16 relative overflow-hidden rounded-full border-2 border-red-600 shadow-[0_0_15px_rgba(220,38,38,0.3)] mb-4">
-            <Image src="/logo.jpeg" alt="Logo Performance" fill className="object-cover" />
+            <Image src="/logo.jpeg" alt="Logo Performance" fill sizes="64px" className="object-cover" />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <span className="font-black text-2xl tracking-tighter text-white">PERFORMANCE</span>

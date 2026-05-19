@@ -34,7 +34,7 @@ export default function RootLayout({
         className="min-h-full bg-cover bg-center bg-fixed bg-no-repeat text-white"
       >
         {/* Camada escura por cima da imagem para garantir a leitura dos textos */}
-        <div className="flex flex-col min-h-screen bg-black/75 backdrop-blur-[2px]">
+        <div className="flex flex-col min-h-screen bg-gradient-to-b from-black/85 to-black/75 backdrop-blur-[2px]">
           
           <Header />
           

@@ -27,13 +27,13 @@ export default function Home() {
 
           <Link
             href="/views/Planos"
-            className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg mb-6"
+            className="inline-block bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black py-5 px-16 rounded-full text-xl transition-all transform hover:scale-110 shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:shadow-[0_0_50px_rgba(220,38,38,0.8)] mb-8 uppercase tracking-widest"
           >
-            CLIQUE AQUI
+            Clique Aqui
           </Link>
 
-          <p className="text-gray-400 text-sm">
-            <span className="text-red-400">→</span> Agendar aula gratuita
+          <p className="text-gray-200 text-sm font-semibold uppercase tracking-widest">
+            <span className="text-red-400 font-black text-lg">→</span> Agendar aula gratuita
           </p>
         </div>
 
