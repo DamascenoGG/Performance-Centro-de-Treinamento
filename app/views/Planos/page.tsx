@@ -22,7 +22,6 @@ export default function Planos() {
         'Cancelamento a qualquer momento',
         'Valor total 599,94 (economize R$ 100,06!)',
       ],
-      highlighted: true,
     },
     {
       name: 'Plano Trimestral',
@@ -58,39 +57,22 @@ export default function Planos() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-6 transition-all duration-500 transform hover:scale-110 backdrop-blur-md flex flex-col h-full justify-between ${
-                plan.highlighted
-                  ? 'bg-gradient-to-br from-red-600 to-red-800 border-2 border-red-400 shadow-[0_0_50px_rgba(220,38,38,0.8),0_0_100px_rgba(220,38,38,0.4)] z-10 md:scale-100'
-                  : 'bg-gradient-to-br from-black/80 to-black/60 border-2 border-red-600/90 hover:border-red-500 shadow-[0_0_30px_rgba(220,38,38,0.4),0_0_60px_rgba(220,38,38,0.2)]'
-              }`}
+              className={`relative rounded-2xl p-6 transition-all duration-500 transform hover:scale-110 backdrop-blur-md flex flex-col h-full justify-between border-2 shadow-[0_0_30px_rgba(0,0,0,0.4),0_0_60px_rgba(0,0,0,0.2)]`}
+              style={{ backgroundColor: '#121212', borderColor: '#121212' }}
             >
-              {plan.highlighted && (
-                <div className="absolute -top-5 left-0 right-0 flex justify-center">
-                  <span className="bg-gradient-to-r from-black to-red-900 text-red-300 border-2 border-red-500 px-8 py-2 rounded-full text-xs font-black shadow-lg uppercase tracking-widest">
-                    ⭐ Mais Popular
-                  </span>
-                </div>
-              )}
-
               <div>
-                <h2 className={`text-xl font-black mb-3 text-center uppercase tracking-widest ${
-                  plan.highlighted ? 'text-white' : 'text-red-500'
-                }`}>
+                <h2 className={`text-xl font-black mb-3 text-center uppercase tracking-widest text-white`}>
                   {plan.name}
                 </h2>
 
-                <div className={`mb-6 text-center border-b-2 pb-4 ${
-                  plan.highlighted ? 'border-red-300/40' : 'border-red-500/40'
-                }`}>
+                <div className={`mb-6 text-center border-b-2 pb-4 border-gray-400/40`}>
                   <div className="flex items-center justify-center gap-1">
-                    <span className="text-3xl font-black text-red-300">R$</span>
-                    <span className={`text-6xl font-black ${plan.highlighted ? 'text-white' : 'text-red-400'}`}>
+                    <span className="text-3xl font-black text-gray-300">R$</span>
+                    <span className={`text-6xl font-black text-white`}>
                       {plan.price.toFixed(2).replace('.', ',')}
                     </span>
                   </div>
-                  <p className={`text-xs mt-2 uppercase tracking-widest font-bold ${
-                    plan.highlighted ? 'text-red-100' : 'text-red-400'
-                  }`}>
+                  <p className={`text-xs mt-2 uppercase tracking-widest font-bold text-red-100`}>
                     por mês
                   </p>
                 </div>
@@ -98,46 +80,23 @@ export default function Planos() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className={`text-lg font-black flex-shrink-0 ${
-                        plan.highlighted ? 'text-white' : 'text-red-500'
-                      }`}>
+                      <span className={`text-lg font-black flex-shrink-0 text-white`}>
                         ✓
                       </span>
-                      <span className={`text-xs font-semibold leading-snug ${
-                         plan.highlighted ? 'text-white' : 'text-gray-300'
-                      }`}>{feature}</span>
+                      <span className={`text-xs font-semibold leading-snug text-white`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <button className={`w-full py-3 px-4 rounded-xl font-black text-sm transition-all duration-300 uppercase tracking-wider group relative overflow-hidden ${
-                plan.highlighted
-                  ? 'bg-gradient-to-r from-white to-gray-100 text-red-700 hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:-translate-y-2'
-                  : 'bg-gradient-to-r from-red-600 to-red-700 text-white hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:-translate-y-2 border border-red-500'
-              }`}>
-                <span className="relative z-10 flex items-center justify-center gap-1">
+              <button className={`w-full py-4 px-6 rounded-full font-black text-base transition-all duration-300 uppercase tracking-wider group relative overflow-hidden bg-white text-red-700 border-4 border-black shadow-[0_4px_0_rgba(0,0,0,0.8)] hover:shadow-[0_2px_0_rgba(0,0,0,0.8)] hover:translate-y-1`}>
+                <span className="relative z-10 flex items-center justify-center gap-2">
                   Clique aqui
-                  <span className="text-lg">→</span>
+                  <span className="text-xl">→</span>
                 </span>
               </button>
             </div>
           ))}
-        </div>
-
-        {/* Informação Adicional de Desconto - Centralizada */}
-        <div className="mt-16 w-full max-w-2xl mx-auto flex flex-col items-center justify-center bg-gradient-to-r from-black/70 to-black/60 border-2 border-red-600/60 p-8 rounded-2xl backdrop-blur-md shadow-[0_0_40px_rgba(220,38,38,0.3)]">
-          
-          <div className="flex flex-wrap items-center justify-center gap-2 text-white text-lg md:text-xl font-bold text-center">
-            Primeiro mês com
-            <span className="text-red-400 font-black text-xl md:text-2xl uppercase tracking-wider">50% OFF</span>
-          </div>
-          
-          <div className="flex items-center justify-center gap-2 mt-4 text-red-300 text-xs font-semibold text-center">
-            <span className="text-lg">🔓</span> 
-            <span>Sem contrato de longa duração • Cancelamento flexível</span>
-          </div>
-          
         </div>
 
       </div>

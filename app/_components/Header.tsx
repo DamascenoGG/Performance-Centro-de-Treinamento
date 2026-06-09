@@ -20,14 +20,13 @@ export default function Header() {
         
         {/* Logo Area */}
         <Link href="/" className="flex items-center gap-3 group">
-          {/* MUDANÇA AQUI: rounded-full e border-red-600 para destacar o círculo */}
           <div className="w-14 h-14 relative overflow-hidden rounded-full border-2 border-red-600 shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-transform group-hover:scale-105">
             <Image
               src="/logo.jpeg"
               alt="Logo Performance"
               fill
               sizes="(max-width: 768px) 100px, 56px"
-              className="object-cover" // MUDANÇA AQUI: cover preenche melhor o círculo
+              className="object-cover"
               priority
             />
           </div>
@@ -48,9 +47,10 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
+          {/* MUDANÇA AQUI: Botão preenchido de vermelho e mais bonito */}
           <Link 
             href="https://api.whatsapp.com/send/?phone=553598632437&text&type=phone_number&app_absent=0" 
-            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition-all transform hover:scale-110 shadow-lg"
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:scale-105"
           >
             Matricule-se
           </Link>
@@ -81,12 +81,13 @@ export default function Header() {
               className="text-xl font-bold uppercase tracking-widest hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
-              {item.label}
+              {item.label}s
             </Link>
           ))}
+          {/* MUDANÇA AQUI: Botão mobile também atualizado */}
           <Link 
-            href="/views/Contato" 
-            className="bg-red-600 text-white py-4 rounded-full text-center font-black uppercase tracking-widest"
+            href="https://api.whatsapp.com/send/?phone=553598632437&text&type=phone_number&app_absent=0" 
+            className="bg-red-600 text-white py-4 px-6 rounded-full text-center font-black uppercase tracking-widest shadow-[0_0_20px_rgba(220,38,38,0.3)]"
             onClick={() => setIsOpen(false)}
           >
             Matricule-se
