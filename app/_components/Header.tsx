@@ -81,7 +81,7 @@ export default function Header() {
               className="text-xl font-bold uppercase tracking-widest hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
-              {item.label}s
+              {item.label}
             </Link>
           ))}
           {/* MUDANÇA AQUI: Botão mobile também atualizado */}
